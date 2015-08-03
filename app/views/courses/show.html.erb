@@ -1,0 +1,15 @@
+<h1>Course #<%= @course.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @course.name %></p>
+</div>
+<div>
+  <strong>Enrolled students</strong>:<br />
+  <% @students.each do |student| %>
+  <p><%= student.name %></p>
+  <% end %>
+</div>
+
+<a href="/courses/<%= @course.id %>/edit">Edit</a> |
+<a href="/courses/<%= @course.id %>/destroy">Destroy</a>
